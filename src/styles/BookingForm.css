@@ -1,0 +1,56 @@
+.booking-form {
+  position: absolute;
+  top: 835px; /* adjust if needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 997px;
+  height: 131px;
+  background-color: #2D2C2C;
+  border: 1px solid #BF9766;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 10;
+}
+
+.booking-input {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.booking-input label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.booking-input input,
+.booking-input select {
+  width: 214px;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #BF9766;
+  background-color: #2D2C2C;
+  color: #fff;
+  font-size: 14px;
+}
+
+.booking-button {
+  margin-top: 24px;
+  height: 40px;
+  padding: 0 20px;
+  background-color: transparent;
+  border: 1px solid #BF9766;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.booking-button:hover {
+  background-color: #BF9766;
+  color: #fff;
+}

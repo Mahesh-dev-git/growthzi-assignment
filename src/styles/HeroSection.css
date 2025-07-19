@@ -1,0 +1,103 @@
+.hero {
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-title {
+  font-family: 'Forum', serif;
+  font-size: 112px;
+  line-height: 124%;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #BF9766;
+  line-height: 100%;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.hero-button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 24px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #d4a25a;
+  color: #000000;
+  border-color: #d4a25a;
+}
+
+.hero-button .arrow {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  border: none;
+  padding: 2px 4px;
+  display: inline-block;
+}
+
+.line {
+  width: 204px;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 8px 0;
+}
+
+.arrow-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 40px;
+  margin-top: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow-btn {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+
+
+

@@ -1,0 +1,120 @@
+.room-category {
+  text-align: center;
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.line-divider {
+  width: 1px;
+  height: 105px;
+  margin: 0 auto 20px;
+  background-color: #bf9766;
+}
+
+.section-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #bf9766;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 126%;
+  color: #171717;
+  margin-bottom: 40px;
+}
+
+.room-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 0 40px;
+}
+
+.room-card {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.room-card.wide {
+  width: 570px;
+  height: 328px;
+}
+
+.room-card.square {
+  width: 360px;
+  height: 328px;
+}
+
+.room-details {
+  width: 100%;
+}
+
+.room-title {
+  font-family: 'Forum', serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.room-price {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 5px 0;
+}
+
+.room-divider {
+  border: none;
+  border-top: 1px solid #fff;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.room-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-now {
+  background: none;
+  border: none;
+  font-style: italic;
+  font-size: 14px;
+  color: #BF9766;
+  cursor: pointer;
+}
+
+.facility-icons {
+  width: 132px;
+  height: 24px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .room-card.wide,
+  .room-card.square {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .room-grid {
+    gap: 20px;
+    padding: 0 20px;
+  }
+}

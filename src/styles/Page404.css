@@ -1,0 +1,62 @@
+.page-404 {
+  background: linear-gradient(to bottom, #3e3d3d, #7a7a7a);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+
+.error-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 150px 120px 80px;
+  text-align: right;
+}
+
+.big-404 {
+  font-family: 'Forum', serif;
+  font-size: 410px;
+  font-weight: 400;
+  line-height: 124%;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.oops-text {
+  font-family: 'Forum', serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 126%;
+  margin: 20px 0 10px;
+  color: white;
+}
+
+.error-description {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 100%;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.back-home-btn {
+  display: inline-block;
+  width: 190px;
+  height: 44px;
+  line-height: 44px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background-color: white;
+  color: #3e3d3d;
+}
