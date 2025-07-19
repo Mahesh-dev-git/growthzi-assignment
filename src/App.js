@@ -8,14 +8,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* ✅ Main page */}
+
         <Route path="/" element={<HomePage01 />} />
 
-        {/* ✅ Add more routes here when you build them */}
-        {/* <Route path="/about" element={<AboutPage />} /> */}
-        {/* <Route path="/service" element={<ServicePage />} /> */}
+      
 
-        {/* ✅ Catch-all route for 404 */}
+
         <Route path="*" element={<Page404 />} />
       </Routes>
     </Router>

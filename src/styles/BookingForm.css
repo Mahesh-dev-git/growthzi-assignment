@@ -1,6 +1,6 @@
 .booking-form {
   position: absolute;
-  top: 835px; /* adjust if needed */
+  top: 835px; 
   left: 50%;
   transform: translateX(-50%);
   width: 997px;
