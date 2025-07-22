@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/RoomCategory.css";
 import roomImage from "../assets/fac-img.png";
 import facilityIcon from "../assets/fac-icon.png";
@@ -12,11 +12,80 @@ const rooms = [
 ];
 
 const RoomCategory = () => {
+  const [heading, setHeading] = useState("Luxury Rooms & Suites");
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedText, setEditedText] = useState(heading);
+
+  useEffect(() => {
+    // Simulated fetch to show console log on load
+    const fetchRooms = async () => {
+      try {
+        const result = { data: rooms };
+        console.log("API Response:", result);
+      } catch (error) {
+        console.error("API Fetch Error:", error);
+      }
+    };
+
+    fetchRooms();
+  }, []);
+
+  const handleSave = async () => {
+    try {
+      const response = await fetch("http://127.0.0.1:5000/update-section", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          component: "RoomCategory",
+          field: "heading",
+          value: editedText,
+        }),
+      });
+
+      const result = await response.json();
+      console.log("API Response:", result);
+      setHeading(editedText);
+      setIsEditing(false);
+    } catch (error) {
+      console.error("API Error:", error);
+    }
+  };
+
   return (
     <section className="room-category">
       <div className="line-divider" />
       <p className="section-subtitle">our room choices</p>
-      <h2 className="section-title">Luxury Rooms & Suites</h2>
+
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
+        {isEditing ? (
+          <>
+            <input
+              type="text"
+              value={editedText}
+              onChange={(e) => setEditedText(e.target.value)}
+              style={{ fontSize: "32px", fontFamily: "Forum, serif", padding: "4px 8px" }}
+            />
+            <button
+              onClick={handleSave}
+              style={{ padding: "6px 12px", background: "#bf9766", color: "#fff", border: "none", cursor: "pointer" }}
+            >
+              Save
+            </button>
+          </>
+        ) : (
+          <>
+            <h2 className="section-title">{heading}</h2>
+            <button
+              onClick={() => setIsEditing(true)}
+              style={{ padding: "6px 12px", background: "#bf9766", color: "#fff", border: "none", cursor: "pointer" }}
+            >
+              Edit
+            </button>
+          </>
+        )}
+      </div>
 
       <div className="room-grid">
         {rooms.map((room, index) => (
