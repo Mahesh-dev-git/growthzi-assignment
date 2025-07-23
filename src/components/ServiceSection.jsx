@@ -47,7 +47,7 @@ const ServiceSection = () => {
 
   const handleSaveHeading = async () => {
     try {
-      await fetch("http://localhost:5000/update-section", {
+      await fetch("https://flask-backend-u613.onrender.com/update-section", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
